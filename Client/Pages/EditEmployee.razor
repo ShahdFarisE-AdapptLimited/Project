@@ -1,0 +1,73 @@
+﻿@page "/editEmployee/{EmployeeId}"
+@using Client.Models
+@using Client.Services
+@inject IEmployeeService _employeeService
+@inject NavigationManager NavigationManager
+<h3>EditEmployee</h3>
+
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="form-group">
+                <input form="Name" class="form-control" @bind=@obj.EmployeeId/>
+            </div>
+
+            <div class="form-group">
+                <label for="FirstName" class="control-label">First Name</label>
+                <input for="FirstName" @bind=@obj.FirstName class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="LastName" class="control-label">Last Name</label>
+                <input form="LastName" @bind=@obj.LastName class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="Designation" class="control-label">Designation</label>
+                <input form="Designation" @bind=@obj.Designation class="form-control"/>
+            </div>
+
+
+            <div class="form-group">
+               <label for="EmailAddress" class="control-label">Email Adddress</label>
+               <input form="EmailAddress" @bind=@obj.EmailAddress class="form-control" type="email"/>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdateEmployee" value="Update"/>
+                <input  type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel"/>
+            </div>
+
+        </div>
+    </div>
+</form>
+@code {
+    [Parameter]
+    public string EmployeeId { get; set; } = "";
+
+    Employee obj = new();
+    protected override async Task OnInitializedAsync()
+    {
+        var id = Convert.ToInt32(EmployeeId);
+        obj = await _employeeService.GetEmployeeByIdAsync(id) ?? new();
+    }
+
+    protected async Task UpdateEmployee()
+    {
+        await _employeeService.UpdateEmployeeAsync(obj);
+        NavigationManager.NavigateTo("employees");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("employees");
+    }
+}

@@ -1,0 +1,192 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Trials\\Client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\pages\\addnewemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:pages\\addnewemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE713386-27A6-4844-981C-DD9E32EB04AE}|..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj|c:\\tasks\\adapptai-task\\adappt-task-api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\pages\\employeeslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:pages\\employeeslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE713386-27A6-4844-981C-DD9E32EB04AE}|..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj|c:\\tasks\\adapptai-task\\adappt-task-api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\pages\\editemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:pages\\editemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE713386-27A6-4844-981C-DD9E32EB04AE}|..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj|c:\\tasks\\adapptai-task\\adappt-task-api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\pages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:pages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE713386-27A6-4844-981C-DD9E32EB04AE}|..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj|c:\\tasks\\adapptai-task\\adappt-task-api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|c:\\trials\\client\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88228C2F-8412-46DA-8F31-222D63E61F64}|Client.csproj|solutionrelative:services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 161,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T12:46:16.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeesList.razor",
+              "DocumentMoniker": "C:\\Trials\\Client\\Pages\\EmployeesList.razor",
+              "RelativeDocumentMoniker": "Pages\\EmployeesList.razor",
+              "ToolTip": "C:\\Trials\\Client\\Pages\\EmployeesList.razor",
+              "RelativeToolTip": "Pages\\EmployeesList.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T12:10:35.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Models\\Employee.cs",
+              "ToolTip": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Models\\Employee.cs",
+              "RelativeToolTip": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Models\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T14:08:52.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddNewEmployee.razor",
+              "DocumentMoniker": "C:\\Trials\\Client\\Pages\\AddNewEmployee.razor",
+              "RelativeDocumentMoniker": "Pages\\AddNewEmployee.razor",
+              "ToolTip": "C:\\Trials\\Client\\Pages\\AddNewEmployee.razor",
+              "RelativeToolTip": "Pages\\AddNewEmployee.razor",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T12:28:04.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditEmployee.razor",
+              "DocumentMoniker": "C:\\Trials\\Client\\Pages\\EditEmployee.razor",
+              "RelativeDocumentMoniker": "Pages\\EditEmployee.razor",
+              "ToolTip": "C:\\Trials\\Client\\Pages\\EditEmployee.razor",
+              "RelativeToolTip": "Pages\\EditEmployee.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T12:12:20.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Services\\AuthService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAiwCEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T14:11:38.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Trials\\Client\\Pages\\Delete.razor",
+              "RelativeDocumentMoniker": "Pages\\Delete.razor",
+              "ToolTip": "C:\\Trials\\Client\\Pages\\Delete.razor",
+              "RelativeToolTip": "Pages\\Delete.razor",
+              "ViewState": "AQIAABsAAAAAAAAAAADwvy4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T12:11:43.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "C:\\Trials\\Client\\Services\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\IEmployeeService.cs",
+              "ToolTip": "C:\\Trials\\Client\\Services\\IEmployeeService.cs",
+              "RelativeToolTip": "Services\\IEmployeeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T12:15:20.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "..\\..\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Controllers\\AccountsController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T12:46:12.569Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 194,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Trials\\Client\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "C:\\Trials\\Client\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T14:08:32.114Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

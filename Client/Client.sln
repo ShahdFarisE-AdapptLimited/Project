@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client.csproj", "{88228C2F-8412-46DA-8F31-222D63E61F64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "..\..\Tasks\AdapptAi-Task\Adappt-Task-Api\Api.csproj", "{CE713386-27A6-4844-981C-DD9E32EB04AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88228C2F-8412-46DA-8F31-222D63E61F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88228C2F-8412-46DA-8F31-222D63E61F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88228C2F-8412-46DA-8F31-222D63E61F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88228C2F-8412-46DA-8F31-222D63E61F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE713386-27A6-4844-981C-DD9E32EB04AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE713386-27A6-4844-981C-DD9E32EB04AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE713386-27A6-4844-981C-DD9E32EB04AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE713386-27A6-4844-981C-DD9E32EB04AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFF7C5F0-400A-4966-BB96-E1221FA88ED8}
+	EndGlobalSection
+EndGlobal

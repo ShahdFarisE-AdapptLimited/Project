@@ -1,0 +1,58 @@
+﻿@page "/employees"
+@using System.ComponentModel.DataAnnotations
+@using Client.Models
+@using Client.Services
+@inject HttpClient Http
+@inject IEmployeeService _employeeService
+
+<PageTitle>Employees</PageTitle>
+
+<h1>Employees</h1>
+
+
+@if (Employees is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var employee in Employees)
+            {
+                <tr>
+                    <td>@($"{employee.FirstName} {employee.LastName}")</td>
+                    <td>@employee.Designation</td>
+                    <td>@employee.EmailAddress</td>
+
+                    <td>
+                        <a class="nav-link" href="editEmployee/@employee.EmployeeId">
+                            <span>Edit</span>
+                        </a>
+                        <a class="nav-link" href="deleteEmployee/@employee.EmployeeId">
+                            <span>Delete</span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Employee>? Employees { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Employees = (await _employeeService.GetAllEmployeesAsync())?.ToList();
+    }
+}

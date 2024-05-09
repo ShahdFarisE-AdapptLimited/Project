@@ -1,0 +1,66 @@
+﻿@page "/AddEmployee"
+@using Client.Models
+@using Client.Services
+@inject IEmployeeService employeeService
+@inject NavigationManager NavigationManager
+
+<h3>Add New Employee</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="FirstName" class="control-label"> First Name </label>
+                <input for="FirsName" class="form-control" @bind="obj.FirstName" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="LastName" class="control-label"> Last Name</label>
+                <input for="LastName" class="form-control" @bind=@obj.LastName />
+            </div>
+
+
+            <div class="form-group">
+                <label for="Designation" class="control-label"> Designation</label>
+                <input @bind=@obj.Designation class="form-control" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="EmployeeCode" class="control-label"> Employee Code</label>
+                <input @bind=@obj.Designation class="form-control" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="EmailAddress" class="control-label">Email Address</label>
+                <input @bind=@obj.EmailAddress type="email" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" onclick="@CreateEmployee" value="Save" />
+                <input type="button" class="btn btn-primary" onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+@code {
+    Employee obj = new Employee();
+
+    protected async Task CreateEmployee()
+    {
+        await employeeService.InsertEmployeeAsync(obj);
+        NavigationManager.NavigateTo("employees");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("employees");
+    }
+}
