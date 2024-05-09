@@ -5205,8 +5205,8 @@
     },
     "Client/1.0.0": {
       "type": "project",
-      "path": "../../../Trials/Client/Client.csproj",
-      "msbuildProject": "../../../Trials/Client/Client.csproj"
+      "path": "../Client/Client.csproj",
+      "msbuildProject": "../Client/Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5227,11 +5227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj",
+      "projectUniqueName": "C:\\Trials\\Project\\Adappt-Task-Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj",
+      "projectPath": "C:\\Trials\\Project\\Adappt-Task-Api\\Api.csproj",
       "packagesPath": "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\",
-      "outputPath": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\obj\\",
+      "outputPath": "C:\\Trials\\Project\\Adappt-Task-Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ShahdFarisEl-Badrawy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5250,6 +5250,9 @@
           "projectReferences": {
             "C:\\Trials\\Client\\Client.csproj": {
               "projectPath": "C:\\Trials\\Client\\Client.csproj"
+            },
+            "C:\\Trials\\Project\\Client\\Client.csproj": {
+              "projectPath": "C:\\Trials\\Project\\Client\\Client.csproj"
             }
           }
         }

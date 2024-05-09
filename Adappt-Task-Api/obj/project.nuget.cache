@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dUzOd9sMK0Fhw9su1EKvylfc0Yrb6guo6XHAxseVA26afo0glmHJ+RgyOsp0K6Qud2hAsorYkEwycGwKSDZbPA==",
+  "dgSpecHash": "801JKRZ9YaJqnyFVcpccsYFWSkK3NzXAVfu6H+Gq3LDhxsAvkIe0af+e0HTi53iGa7yj1llctb5KtXPsK7jbFw==",
   "success": true,
-  "projectFilePath": "C:\\Tasks\\AdapptAi-Task\\Adappt-Task-Api\\Api.csproj",
+  "projectFilePath": "C:\\Trials\\Project\\Adappt-Task-Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

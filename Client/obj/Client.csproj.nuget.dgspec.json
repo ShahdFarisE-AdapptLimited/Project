@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Trials\\Client\\Client.csproj": {}
+    "C:\\Trials\\Project\\Client\\Client.csproj": {}
   },
   "projects": {
-    "C:\\Trials\\Client\\Client.csproj": {
+    "C:\\Trials\\Project\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Trials\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Trials\\Project\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Trials\\Client\\Client.csproj",
+        "projectPath": "C:\\Trials\\Project\\Client\\Client.csproj",
         "packagesPath": "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\",
-        "outputPath": "C:\\Trials\\Client\\obj\\",
+        "outputPath": "C:\\Trials\\Project\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ShahdFarisEl-Badrawy\\AppData\\Roaming\\NuGet\\NuGet.Config",
