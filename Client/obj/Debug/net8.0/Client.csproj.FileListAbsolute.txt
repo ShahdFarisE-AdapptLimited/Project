@@ -2080,7 +2080,10 @@ C:\Trials\Client\obj\Debug\net8.0\compressed\w18715j7xi.gz
 C:\Trials\Client\obj\Debug\net8.0\compressed\sm749dy9zm.gz
 C:\Trials\Client\obj\Debug\net8.0\compressed\rljxfvb4tz.gz
 C:\Trials\Client\obj\Debug\net8.0\compressed\ici4gy8v9v.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Client.pdb
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Client.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.ue7y17xseg.js
@@ -2285,24 +2288,13 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlSeria
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.4.10gp3qz5eo.js.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.ue7y17xseg.js.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Client.pdb
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Client.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Linq.Queryable.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encodings.Web.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Primitives.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.FileVersionInfo.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.4.10gp3qz5eo.js.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Pipelines.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.ServiceProcess.wasm.gz
@@ -2332,6 +2324,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCor
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Ping.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Extensions.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Data.Common.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.UnmanagedMemoryStream.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Numerics.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Private.Uri.wasm.gz
@@ -2403,6 +2396,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentMod
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.Brotli.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.AccessControl.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.NonGeneric.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm.gz
@@ -2412,6 +2406,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encodin
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Numerics.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Private.CoreLib.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.ThreadPool.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Client.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Tracing.wasm.gz
@@ -2452,8 +2447,10 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Ti
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.StackTrace.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebClient.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Linq.Parallel.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Overlapped.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.SecureString.wasm.gz
@@ -2466,6 +2463,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Memory.wasm.
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.Linq.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebSockets.Client.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.ue7y17xseg.js.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Configuration.wasm.gz
@@ -2484,6 +2482,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Data.DataSetExtensions.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Dynamic.Runtime.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.TextWriterTraceListener.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.OpenSsl.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.wasm.gz
@@ -2494,6 +2493,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cry
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XDocument.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlDocument.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\Client.staticwebassets.runtime.json
@@ -3132,3 +3132,8 @@ C:\Trials\Project\Client\obj\Debug\net8.0\Client.dll
 C:\Trials\Project\Client\obj\Debug\net8.0\refint\Client.dll
 C:\Trials\Project\Client\obj\Debug\net8.0\Client.pdb
 C:\Trials\Project\Client\obj\Debug\net8.0\ref\Client.dll
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
+C:\Trials\Project\Client\obj\Debug\net8.0\compressed\hytuzci8uc.gz

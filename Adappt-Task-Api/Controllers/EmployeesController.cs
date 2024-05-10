@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.DTO;
-using WebApplication1.Models;
+using Api.DTO;
+using Api.Models;
 
-namespace WebApplication1.Controllers
+namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -32,6 +32,8 @@ namespace WebApplication1.Controllers
                 Designation = Dto.Designation,
                 EmailAddress = Dto.EmailAddress
             };
+
+            
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Dto.Password);
             employee.PasswordHash = hashedPassword;
 

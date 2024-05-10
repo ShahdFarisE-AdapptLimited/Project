@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace Api.Models
 {
     public class Employee
     {
@@ -16,5 +16,7 @@ namespace WebApplication1.Models
         public string EmailAddress { get; set; } = string.Empty;
 
         public string PasswordHash { get; set; } = string.Empty;
+
+        public int? DepartmentId { get; set; }
     }
 }

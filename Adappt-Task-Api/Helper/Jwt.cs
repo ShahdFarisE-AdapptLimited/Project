@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Helper
+﻿namespace Api.Helper
 {
     public class Jwt
     {

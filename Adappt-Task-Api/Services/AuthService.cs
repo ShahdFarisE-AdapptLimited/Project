@@ -1,13 +1,13 @@
-﻿using WebApplication1.DTO;
-using WebApplication1.Models;
+﻿using Api.DTO;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Api.Models;
 
 
-namespace WebApplication1.Services
+namespace Api.Services
 {
     public class AuthService : IAuthService
     {

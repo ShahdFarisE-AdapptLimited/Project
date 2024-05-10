@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RGCdUFtyBPCmsn434LBFkAPXf3U0T3WseVISBQuTLUY+hZvsRj1V3TBgdWGgL0xP8vf1kKBngtKEwSbHHziNGA==",
+  "dgSpecHash": "iR/7tzY7G6zt8vQpqPfpzur/1ieDE8e2zF+mXQVIUz+EWBF4S3IGrndptVW7yGk/AxXMr1HOo5g5gKZpatC0zw==",
   "success": true,
   "projectFilePath": "C:\\Trials\\Project\\Client\\Client.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.2\\microsoft.jsinterop.webassembly.8.0.2.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.4\\microsoft.net.sdk.webassembly.pack.8.0.4.nupkg.sha512",
+    "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\ShahdFarisEl-Badrawy\\.nuget\\packages\\system.net.http.json\\8.0.0\\system.net.http.json.8.0.0.nupkg.sha512",

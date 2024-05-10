@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LZXljdrK7pQvDApP/3uUYIwZHt2qOBt0YTspJaqz+Ts=",
+  "Hash": "Xo0phVNr5+HI3Ll6+zckGkZwSTRT5SQPHWDiWQpQIIU=",
   "Source": "Api",
   "BasePath": "_content/Api",
   "Mode": "Default",
@@ -901,6 +901,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Trials\\Project\\Client\\obj\\Debug\\net8.0\\webcil\\netstandard.wasm"
+    },
+    {
+      "Identity": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Newtonsoft.Json.wasm",
+      "SourceId": "Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Trials\\Project\\Client\\obj\\Debug\\net8.0\\webcil\\Newtonsoft.Json.wasm"
     },
     {
       "Identity": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.AppContext.wasm",
@@ -5955,6 +5974,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.wasm"
+    },
+    {
+      "Identity": "C:\\Trials\\Project\\Client\\obj\\Debug\\net8.0\\compressed\\hytuzci8uc.gz",
+      "SourceId": "Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Newtonsoft.Json.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Trials\\Project\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Newtonsoft.Json.wasm"
     },
     {
       "Identity": "C:\\Trials\\Project\\Client\\obj\\Debug\\net8.0\\compressed\\i2mwvga6pk.gz",

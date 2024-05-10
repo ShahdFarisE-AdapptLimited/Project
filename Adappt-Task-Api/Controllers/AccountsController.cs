@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.DTO;
-using WebApplication1.Services;
+using Api.DTO;
+using Api.Services;
 
-namespace WebApplication1.Controllers
+namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -18,16 +18,7 @@ namespace Client.Services
             response.EnsureSuccessStatusCode(); // Check for successful response
             return await response.Content.ReadFromJsonAsync<List<Employee>>();
         }
-
-
-        //Add  Employees
-        public async Task<bool> InsertEmployeeAsync(Employee employee)
-        {
-            var response = await _httpClient.PostAsJsonAsync("employees", employee);
-            response.EnsureSuccessStatusCode(); // Check for successful response
-            return response.IsSuccessStatusCode; // Return true on successful creation
-        }
-
+       
         //Get Employee By Id  
         public async Task<Employee?> GetEmployeeByIdAsync(int id)
         {
@@ -36,6 +27,13 @@ namespace Client.Services
             return await response.Content.ReadFromJsonAsync<Employee>();
         }
 
+        //Add  Employees
+        public async Task<bool> InsertEmployeeAsync(Employee employee)
+        {
+            var response = await _httpClient.PostAsJsonAsync("employees", employee);
+            response.EnsureSuccessStatusCode(); // Check for successful response
+            return response.IsSuccessStatusCode; // Return true on successful creation
+        }
 
         //Update Employee
         public async Task<bool> UpdateEmployeeAsync(Employee employee)

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
-namespace WebApplication1.DTO
+namespace Api.DTO
 {
     public class TokenRequestDto
     {

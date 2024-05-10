@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.DTO
+namespace Api.DTO
 {
     public class EmploeeDto
     {
@@ -9,8 +9,6 @@ namespace WebApplication1.DTO
         public string LastName { get; set; } = string.Empty;
 
         public string Designation { get; set; } = string.Empty;
-
-        public int EmployeeCode { get; set; }
 
         [EmailAddress]
         public string EmailAddress { get; set; } = string.Empty;

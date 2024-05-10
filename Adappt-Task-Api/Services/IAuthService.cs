@@ -1,7 +1,7 @@
-﻿using WebApplication1.DTO;
+﻿using Api.DTO;
 
 
-namespace WebApplication1.Services
+namespace Api.Services
 {
     public interface IAuthService
     {
