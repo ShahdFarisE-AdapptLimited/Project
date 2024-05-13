@@ -26,36 +26,44 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Trials/Project/Client/Pages/AddNewEmployee.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTmV3RW1wbG95ZWUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Trials/Project/Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Trials/Project/Client/Pages/Delete.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Trials/Project/Client/Pages/Departments/AddNewDepartment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcQWRkTmV3RGVwYXJ0bWVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Trials/Project/Client/Pages/EditEmployee.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEVtcGxveWVlLnJhem9y
+[C:/Trials/Project/Client/Pages/Departments/DepartmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcRGVwYXJ0bWVudHNMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Trials/Project/Client/Pages/EmployeesList.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzTGlzdC5yYXpvcg==
+[C:/Trials/Project/Client/Pages/Departments/EditDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcRWRpdERlcGFydG1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/AddNewEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcQWRkTmV3RW1wbG95ZWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/EditEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcRWRpdEVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/EmployeesList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcRW1wbG95ZWVzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Pages/Emplyees/ViewEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbHllZXNcVmlld0VtcGxveWVlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Trials/Project/Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Trials/Project/Client/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Trials/Project/Client/_Imports.razor]

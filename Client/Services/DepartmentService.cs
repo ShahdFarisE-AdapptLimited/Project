@@ -36,9 +36,9 @@ namespace Client.Services
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<bool> UpdateDepartmentAsync(int DepartmentId ,Department Department)
+        public async Task<bool> UpdateDepartmentAsync(Department Department)
         {
-            var response = await _httpClient.PutAsJsonAsync($"Departments/Update/{DepartmentId}", Department);
+            var response = await _httpClient.PutAsJsonAsync($"Departments/Update/{Department.DepartmentId}", Department);
             response.EnsureSuccessStatusCode();
             return response.IsSuccessStatusCode;
         }

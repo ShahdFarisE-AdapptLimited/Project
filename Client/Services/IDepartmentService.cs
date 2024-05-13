@@ -8,7 +8,7 @@ namespace Client.Services
         Task<List<Department>?> GetAllDepartmetsAsync();
         Task<Department?> GetDepartmetByIdAsync(int id);
         Task<bool> InsertDepartmentAsync(Department Dpartment);
-        Task<bool> UpdateDepartmentAsync(int DepartmentId, Department Department);
+        Task<bool> UpdateDepartmentAsync(Department Department);
 
         //ToDo: 
         //Task<bool> AddEmployeeToDepartment(int departmentId, Employee employee);

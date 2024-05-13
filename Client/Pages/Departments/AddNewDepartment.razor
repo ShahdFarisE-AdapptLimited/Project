@@ -1,13 +1,43 @@
 ﻿@page "/AddNewDepartment"
 @using Client.Models
+@using Client.Services
+@inject IDepartmentService departmentService
+@inject NavigationManager NavigationManager
 
 <h3>AddNewDepartment</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="DepartmentName" class="control-label">Department Name</label>
+                <input for="DepartmentName" class="form-control" @bind="department.DepartmentName"/>
+            </div>
+        </div>
+    </div>    
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                 <input type="button" class="btn btn-primary" onclick="@CreateDepartment" value="Save"/>
+                 <input type="button" class="btn btn-primary" onclick="@Cancel" value="Cancel"/>
+             </div>
+        </div>
+    </div>
+</form>
 
 @code {
     Department department = new Department();
 
-    protected async Task CreateEmployee()
+    protected async Task CreateDepartment()
     {
-        
+        await departmentService.InsertDepartmentAsync(department);
+        NavigationManager.NavigateTo("departments");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("departments");
     }
 }

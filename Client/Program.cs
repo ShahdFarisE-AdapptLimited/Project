@@ -10,7 +10,6 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped<ApplicationDbContext>();
 
 builder.Services.AddHttpClient<IEmployeeService, EmployeeService>(
     client =>
@@ -18,6 +17,11 @@ builder.Services.AddHttpClient<IEmployeeService, EmployeeService>(
         client.BaseAddress = new Uri(@"https://localhost:7263/api/");
     });
 
+builder.Services.AddHttpClient<IDepartmentService, DepartmentService>(
+    client=>
+    {
+        client.BaseAddress = new Uri(@"https://localhost:7263/api/");
+    });
 builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)

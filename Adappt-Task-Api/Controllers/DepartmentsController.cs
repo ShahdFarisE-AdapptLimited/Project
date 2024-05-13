@@ -19,7 +19,9 @@ namespace Api.Controllers
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetDepartmemnts()
         {
-            var departments = await _context.Departments.ToListAsync();
+            var departments = await _context.Departments
+                                        .Include(d => d.Employees)
+                                        .ToListAsync();
             return Ok(departments);
         }
 

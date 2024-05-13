@@ -3,7 +3,7 @@
 @using Client.Services
 @inject IEmployeeService _employeeService
 @inject NavigationManager NavigationManager
-<h3>EditEmployee</h3>
+<h3>Edit Employee</h3>
 
 <hr />
 <form>
@@ -53,6 +53,7 @@
     [Parameter]
     public string EmployeeId { get; set; } = "";
 
+    // refactor 
     Employee obj = new();
     protected override async Task OnInitializedAsync()
     {

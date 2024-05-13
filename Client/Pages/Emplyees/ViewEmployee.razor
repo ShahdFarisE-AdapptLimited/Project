@@ -1,0 +1,76 @@
+﻿@page "/Employee/{EmployeeId}"
+@using Client.Models
+@using Client.Services
+@inject IEmployeeService _employeeService
+@inject NavigationManager NavigationManager
+
+<h3>Employee Details</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="form-group">
+                <label> Employee Id: </label>
+                <label>@obj?.EmployeeId</label>
+            </div>
+
+            <div class="form-group">
+                <label>First Name</label>
+                <label>@obj.FirstName</label>
+            </div>
+
+            <div class="form-group">
+                <label>Last Name: </label>
+                <label>@obj.LastName</label>
+            </div>
+
+            <div class="form-group">
+                <label>Designation: </label>
+                <label>@obj.Designation</label>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <label>@obj.EmailAddress</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @*     <input type="button" class="btn btn-primary" @onclick="@DeleteEmployee" value="Delete" /> *@
+                @*                 <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+                *@
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@code {
+    [Parameter]
+    public string EmployeeId { get; set; }
+
+    Employee? obj = new Employee();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var id = Convert.ToInt32(EmployeeId);
+        obj = await _employeeService.GetEmployeeByIdAsync(id);
+    }
+
+    protected async void DeleteEmployee()
+    {
+        var id = Convert.ToInt32(EmployeeId);
+        await _employeeService.DeleteEmployeeAsync(id);
+        NavigationManager.NavigateTo("employees");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("employees");
+    }
+}

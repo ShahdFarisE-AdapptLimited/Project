@@ -1,0 +1,55 @@
+﻿@page "/editDepartment/{DepartmentId}"
+@using Client.Models
+@using Client.Services
+@inject IDepartmentService _departmentService
+@inject NavigationManager NavigationManager
+<h3>Edit Department</h3>
+
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            
+            <div class="form-group">
+                @* ckeck this in rendring *@
+                <input for="Id" class="form-control" @bind=@department.DepartmentId />
+            </div>
+
+             <div class="form-group">
+                 <label for="DepartmentName" class="control-label">Name</label>
+                 <input for="DepartmentName" class="form-control" @bind=@department.DepartmentName/>
+             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdateDepartment" value="update" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="cancel"/>
+            </div>  
+        </div>
+    </div>
+</form>
+@code {
+    [Parameter]
+    public string DepartmentId { get; set; } = "";
+
+    Department department = new();
+    protected override async Task OnInitializedAsync()
+    {
+        var id = Convert.ToInt32(DepartmentId);
+        department = await _departmentService.GetDepartmetByIdAsync(id) ?? new();
+    }
+
+    protected async Task UpdateDepartment()
+    {
+        await _departmentService.UpdateDepartmentAsync(department);
+        NavigationManager.NavigateTo("departments");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("departments");
+    }
+}

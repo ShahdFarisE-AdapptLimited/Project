@@ -1,0 +1,62 @@
+﻿@page "/departments"
+@using Client.Models
+@using Client.Services
+@inject IDepartmentService _departmentService
+
+<h3>Departments</h3>
+
+@if (Departments is null)
+{
+    <p>Loading ....</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Employees</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var depart in Departments)
+            {
+                <tr>
+                    <td>@depart.DepartmentName</td>
+                    <td>
+                        @if (depart.Employees?.Any() == true)
+                        {
+                            @foreach (var employee in depart.Employees)
+                            {
+                               
+                            }
+                        }
+                        else
+                        {
+                            <span>No Employees</span>
+                        }
+                    </td>
+                    <td>
+                        <a class="nav-link" href="editDepartment/@depart.DepartmentId">
+                            <span>Edit</span>
+                        </a>
+
+                        <a class="nav-link" href="deleteDepartment/@depart.DepartmentId">
+                            <span>Delete</span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Department>? Departments { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Departments = (await _departmentService.GetAllDepartmetsAsync())?.ToList();
+    }
+}
