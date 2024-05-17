@@ -17,6 +17,7 @@ namespace Api.Models
 
         public string PasswordHash { get; set; } = string.Empty;
 
-        public int? DepartmentId { get; set; }
+        public List<Department> Departments { get; set; }
     }
+
 }

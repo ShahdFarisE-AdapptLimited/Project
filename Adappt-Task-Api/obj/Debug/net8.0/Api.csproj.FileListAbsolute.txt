@@ -290,14 +290,6 @@ C:\Tasks\AdapptAi-Task\Adappt-Task-Api\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\Tasks\AdapptAi-Task\Adappt-Task-Api\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
 C:\Tasks\AdapptAi-Task\Adappt-Task-Api\bin\Debug\net8.0\Client.dll
 C:\Tasks\AdapptAi-Task\Adappt-Task-Api\bin\Debug\net8.0\Client.pdb
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.csproj.AssemblyReference.cache
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.AssemblyInfoInputs.cache
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.AssemblyInfo.cs
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.csproj.CoreCompileInputs.cache
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.sourcelink.json
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Client.staticwebassets.runtime.json
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\appsettings.Development.json
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\appsettings.json
@@ -346,6 +338,7 @@ C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -429,6 +422,14 @@ C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\Syste
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Client.dll
 C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Client.pdb
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.csproj.AssemblyReference.cache
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.AssemblyInfoInputs.cache
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.AssemblyInfo.cs
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.csproj.CoreCompileInputs.cache
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.sourcelink.json
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\staticwebassets\msbuild.Api.Microsoft.AspNetCore.StaticWebAssets.props
@@ -443,4 +444,3 @@ C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\refint\Api.dll
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.pdb
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Trials\Project\Adappt-Task-Api\obj\Debug\net8.0\ref\Api.dll
-C:\Trials\Project\Adappt-Task-Api\bin\Debug\net8.0\Newtonsoft.Json.dll

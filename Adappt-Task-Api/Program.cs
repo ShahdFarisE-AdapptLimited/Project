@@ -1,12 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
 using Api.Services;
+using System.Text.Json.Serialization;
+using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+
+builder.Services.Configure<JsonOptions>(op => op.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));

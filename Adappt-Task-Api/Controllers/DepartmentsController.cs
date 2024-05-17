@@ -28,7 +28,10 @@ namespace Api.Controllers
         [HttpGet("GetById/{DepartmentId}")]
         public async Task<IActionResult> GetDepartmentById(int DepartmentId)
         {
-            var department = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
+            var department = await _context.Departments
+                .Include(d => d.Employees)
+                .FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
+                                
             return Ok(department);
         }
 
@@ -46,6 +49,8 @@ namespace Api.Controllers
             return Ok(depart);
         }
 
+
+
         [HttpPut("AddEmployee/{DepartmentId}")]
         public async Task<IActionResult> AddEmployee(int DepartmentId, Employee employee)
         {
@@ -56,27 +61,44 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            if (employee.DepartmentId != 0)
-            {
-                var oldDepartment = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == employee.DepartmentId);
-                oldDepartment?.Employees.Remove(employee);
-                await _context.SaveChangesAsync();
-            }
 
-            employee.DepartmentId = DepartmentId;
+            employee.Departments.Add(depart);
             _context.Update(employee);
 
             depart.Employees.Add(employee);
             _context.Update(depart);
+
             await _context.SaveChangesAsync();
 
-            return Ok(depart);
+            return Ok();
+        }
+
+        [HttpPut("RemoveEmployee/{DepartmentId}")]
+        public async Task<IActionResult> RemoveEmployee(int DepartmentId, Employee employee)
+        {
+            var depart = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
+
+            if (depart is null)
+            {
+                return NotFound();
+            }
+
+
+            employee.Departments.Remove(depart);
+            _context.Update(employee);
+
+            depart.Employees.Remove(employee);
+            _context.Update(depart);
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update(int DepartmentId,Department NewDepartment)
+        public async Task<IActionResult> Update(int DepartmentId, Department NewDepartment)
         {
-            var department = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId); 
+            var department = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
             if (department == null)
             {
                 return NotFound();
@@ -84,7 +106,7 @@ namespace Api.Controllers
             department.DepartmentName = NewDepartment.DepartmentName;
             department.Employees = NewDepartment.Employees;
 
-            _context.Departments.Update(NewDepartment); 
+            _context.Departments.Update(NewDepartment);
             await _context.SaveChangesAsync();
             return Ok(NewDepartment);
         }

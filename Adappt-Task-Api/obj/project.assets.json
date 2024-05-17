@@ -5292,9 +5292,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Trials\\Client\\Client.csproj": {
-              "projectPath": "C:\\Trials\\Client\\Client.csproj"
-            },
             "C:\\Trials\\Project\\Client\\Client.csproj": {
               "projectPath": "C:\\Trials\\Project\\Client\\Client.csproj"
             }
