@@ -46,34 +46,32 @@ namespace Api.Controllers
             return Ok(depart);
         }
 
-        //ToDo:
+        [HttpPut("AddEmployee/{DepartmentId}")]
+        public async Task<IActionResult> AddEmployee(int DepartmentId, Employee employee)
+        {
+            var depart = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
 
-        //[HttpPut("AddEmployee/{DepartmentId}")]
-        //public async Task<IActionResult> AddEmployee(int DepartmentId, Employee employee)
-        //{
-        //    var depart =await _context.Departments.FirstOrDefaultAsync(d =>d.DepartmentId == DepartmentId);
-            
-        //    if(depart is null)
-        //    {
-        //        return NotFound();
-        //    }
-          
-        //    if (employee.DepartmentId != 0)
-        //    {
-        //        var oldDepartment = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == employee.DepartmentId);
-        //        oldDepartment?.Employees.Remove(employee);
-        //        await _context.SaveChangesAsync();
-        //    }
+            if (depart is null)
+            {
+                return NotFound();
+            }
 
-        //    employee.DepartmentId = DepartmentId;
-        //    _context.Update(employee);
+            if (employee.DepartmentId != 0)
+            {
+                var oldDepartment = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == employee.DepartmentId);
+                oldDepartment?.Employees.Remove(employee);
+                await _context.SaveChangesAsync();
+            }
 
-        //    depart.Employees.Add(employee);
-        //    _context.Update(depart);
-        //    await _context.SaveChangesAsync();
-            
-        //    return Ok(depart);
-        //}
+            employee.DepartmentId = DepartmentId;
+            _context.Update(employee);
+
+            depart.Employees.Add(employee);
+            _context.Update(depart);
+            await _context.SaveChangesAsync();
+
+            return Ok(depart);
+        }
 
         [HttpPut("Update")]
         public async Task<IActionResult> Update(int DepartmentId,Department NewDepartment)
