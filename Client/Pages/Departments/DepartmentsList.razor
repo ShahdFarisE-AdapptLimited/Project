@@ -1,55 +1,53 @@
 ﻿@page "/departments"
 @using Client.Models
 @using Client.Services
+@using Client.Pages.Popup
 @inject NavigationManager NavigationManager
 @inject IDepartmentService _departmentService
 @inject IEmployeeService _employeeService
 
+<h3>Departments</h3>
 
-@if (Departments is null)
+@if (departments is null)
 {
     <p>Loading ....</p>
 }
 else
 {
-    <DepartmentsListBox 
-                        Departments="@Departments"
-                        Employees="@Employees"
-                        SelectedValue="SelectedItemId"
-                        ValueChanged="OnSelectionChanged"
-                        ChosenEmployee="@choosenEmployee"
-                        EmployeeAdded="OnEmployeeAdded">
-    </DepartmentsListBox>
+    <select @onchange="OnDepartmentChange">
+        @foreach (var deaprt in departments)
+        {
+            <option value="@deaprt">
+                @deaprt.DepartmentName
+            </option>
+        }
+    </select>
 
-
-
+    @if (showPopup)
+    {
+        <EmployeePopup Department="selectedDepartment" OnClose="ClosePopup"></EmployeePopup>
+    }
 }
 
 @code {
 
-    private List<Department>? Departments { get; set; }
-    private List<Employee>? Employees { get; set; }
-    private int SelectedItemId { get; set; }
-
-    private int choosenEmployee { get; set; }
-
+    private List<Department> departments { get; set; }
+    private string  selectedDepartment { get; set; }
+    private bool showPopup = false;
 
     protected override async Task OnInitializedAsync()
     {
-        Departments = (await _departmentService.GetAllDepartmetsAsync())?.ToList();
-
-
-        Employees = (await _employeeService.GetAllEmployeesAsync())?.ToList();
+        departments = await _departmentService.GetAllDepartmetsAsync() ?? new();
     }
 
-    private void OnSelectionChanged(int newSelectedValue)
+    private void OnDepartmentChange(ChangeEventArgs e)
     {
-        SelectedItemId = newSelectedValue;
+        selectedDepartment = e.Value.ToString();
+        showPopup = true;
     }
 
-    private async Task OnEmployeeAdded()
+    private void ClosePopup()
     {
-        var employee = await _employeeService.GetEmployeeByIdAsync(choosenEmployee);
-        await _departmentService.AddEmployee(choosenEmployee, employee);
+        showPopup = true;
     }
 }

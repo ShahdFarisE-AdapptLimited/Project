@@ -11,5 +11,6 @@ namespace Client.Services
         Task<bool> UpdateDepartmentAsync(Department Department);
 
         Task<bool> AddEmployee(int DepartmentId, Employee employee);
+        Task<bool> RemoveEmployee(int DepartmentId, Employee employee);
     }
 }

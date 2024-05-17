@@ -2126,6 +2126,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Pri
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Registry.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm
@@ -2392,6 +2393,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Ta
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Web.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.wasm.gz
+C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.Primitives.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.Brotli.wasm.gz
 C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
@@ -2525,6 +2527,7 @@ C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.Extensions.Options.Configura
 C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Trials\Project\Client\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Trials\Project\Client\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.CSharp.dll
 C:\Trials\Project\Client\bin\Debug\net8.0\Microsoft.VisualBasic.Core.dll
@@ -2736,6 +2739,7 @@ C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Options.Co
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Primitives.wasm
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.wasm
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.WebAssembly.wasm
+C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.CSharp.wasm
 C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.Core.wasm
@@ -2946,6 +2950,7 @@ C:\Trials\Project\Client\obj\Debug\net8.0\compressed\811fy37kvx.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\ec28mzu95g.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\3zfz7bmll0.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\dsospvg3pz.gz
+C:\Trials\Project\Client\obj\Debug\net8.0\compressed\hytuzci8uc.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\140zwiiymm.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\9dwasi9zyz.gz
 C:\Trials\Project\Client\obj\Debug\net8.0\compressed\f9au42t0zp.gz
@@ -3132,8 +3137,3 @@ C:\Trials\Project\Client\obj\Debug\net8.0\Client.dll
 C:\Trials\Project\Client\obj\Debug\net8.0\refint\Client.dll
 C:\Trials\Project\Client\obj\Debug\net8.0\Client.pdb
 C:\Trials\Project\Client\obj\Debug\net8.0\ref\Client.dll
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
-C:\Trials\Project\Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm.gz
-C:\Trials\Project\Client\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Trials\Project\Client\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
-C:\Trials\Project\Client\obj\Debug\net8.0\compressed\hytuzci8uc.gz

@@ -1,0 +1,86 @@
+﻿@using Client.Services
+@using Client.Models
+@inject IDepartmentService _departmentService
+@inject IEmployeeService _employeeService
+
+<div class="popup">
+    <h4>Manage Employees for @department.DepartmentName</h4>
+    <button @onclick="Close">Close</button>
+   
+    <div class="employee-container">
+        <div>
+            <h5>Available Employees</h5>
+            <select>
+                @foreach (var employee in availableEmployees)
+                {
+                    <option>
+                        @employee.FirstName
+                    </option>
+                }
+            </select>
+        </div>
+        <div>
+            <h5>@department.DepartmentName Employees</h5>
+           <select>
+                @foreach (var employee in departmentEmployees)
+                {
+                    <option>
+                        employee.FirstName                      
+                    </option>
+                }
+            </select>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Department { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private List<Employee> availableEmployees = new();
+    private List<Employee> departmentEmployees = new();
+    private Department department = new();
+    private int DepartmentId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadEmployees();
+    }
+
+    private async Task LoadEmployees()
+    {
+        DepartmentId = Convert.ToInt32(Department);
+        availableEmployees = await _employeeService.GetAllEmployeesAsync() ?? new();
+        department = await _departmentService.GetDepartmetByIdAsync(DepartmentId) ?? new();
+        departmentEmployees = department?.Employees.ToList()!;
+    }
+
+    private async Task AddEmployeeToDepartment(Employee employee)
+    {
+        DepartmentId = Convert.ToInt32(Department);
+
+        var response = await _departmentService.AddEmployee(DepartmentId, employee);
+        if (response)
+        {
+            availableEmployees.Remove(employee);
+            departmentEmployees.Add(employee);
+        }
+    }
+
+    private async Task RemoveEmployeeFromDepartment(Employee employee)
+    {
+        DepartmentId = Convert.ToInt32(Department);
+
+        var response = await _departmentService.RemoveEmployee(DepartmentId, employee);
+        if (response)
+        {
+            departmentEmployees.Remove(employee);
+            availableEmployees.Add(employee);
+        }
+    }
+
+    private void Close()
+    {
+        OnClose.InvokeAsync(null);
+    }
+}

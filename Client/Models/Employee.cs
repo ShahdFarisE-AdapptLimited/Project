@@ -18,7 +18,7 @@ namespace Client.Models
 
         public string PasswordHash { get; set; } = string.Empty;
 
-        [ForeignKey(nameof(Department))]
-        public int DepartmentId { get; set; }
+    
+        public List<Department> Departments { get; set; }
     }
 }

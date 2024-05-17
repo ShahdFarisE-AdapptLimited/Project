@@ -15,70 +15,13 @@
     </select>
 </div>
 
-@if (SelectedValue != -1)
-{
-     <div class="dialog">
-
-        <div class="row-container">
-
-            <div class="column-list">
-                <select size="5" class="overflow-auto">
-                    @if (Employees is not null)
-                    {
-                        var list = Employees.ToList();
-                        foreach (var Employee in list)
-                        {
-                            <option class="px-2" value="@Employee.EmployeeId">
-                                @Employee.FirstName @Employee.LastName
-                            </option>
-                        }
-                    }
-                </select>
-            </div>
-
-            <div class="button-container">
-                <button class="move-button" onclick="@OnEmployeeAdd" >>></button>
-                <button class="move-button"> &lt;&lt; </button>
-            </div>
-
-            <div class="column-list">
-                <select @bind="@ChosenEmployee" size="5" class="overflow-auto">
-                    @if (Employees is not null)
-                    {
-                        var list = Employees.Where(e => e.DepartmentId == SelectedValue).ToList();
-                        foreach (var Employee in list)
-                        {
-                            <option class="px-2" value="@Employee.EmployeeId">
-                                @Employee.FirstName @Employee.LastName
-                            </option>
-                        }
-                    }
-                </select>
-            </div>
-
-        </div>
-
-        <div class="footer">
-            <button class="display-button">Display</button>
-            <button class="close-button">Close</button>
-        </div>
-    </div>
-}
-
-
-
 
 
 @code {
     [Parameter] public List<Department> Departments { get; set; }
-    [Parameter] public List<Employee> Employees { get; set; }
     [Parameter] public int SelectedValue { get; set; } //Department ID
-
-
     [Parameter] public EventCallback<int> ValueChanged { get; set; }
 
-    [Parameter] public int ChosenEmployee { get; set; }
-    [Parameter] public EventCallback<int> EmployeeAdded { get; set; }
 
 
     private MouseEventArgs mouseEvent = null!;
@@ -99,8 +42,5 @@
         ValueChanged.InvokeAsync(SelectedValue);
     }
 
-    private void OnEmployeeAdd()
-    {
-        EmployeeAdded.InvokeAsync(ChosenEmployee);
-    }
+  
 }
