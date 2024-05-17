@@ -3,8 +3,8 @@
 @using Client.Services
 @inject NavigationManager NavigationManager
 @inject IDepartmentService _departmentService
+@inject IEmployeeService _employeeService
 
-<h3>Departments</h3>
 
 @if (Departments is null)
 {
@@ -12,43 +12,44 @@
 }
 else
 {
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Department Name</th>
-                <th>Employees</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var department in Departments)
-            {
-                <tr>
-                    <td>@department.DepartmentName</td>
-                    <td>
-                        <ul>
-                            @foreach (var employee in department.Employees)
-                            {
-                                <li>
-                                    <a href="@($"employee/{employee.EmployeeId}")">
-                                        @($"{employee.FirstName} {employee.LastName}")
-                                    </a>
-                                </li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <DepartmentsListBox 
+                        Departments="@Departments"
+                        Employees="@Employees"
+                        SelectedValue="SelectedItemId"
+                        ValueChanged="OnSelectionChanged"
+                        ChosenEmployee="@choosenEmployee"
+                        EmployeeAdded="OnEmployeeAdded">
+    </DepartmentsListBox>
+
+
 
 }
 
 @code {
 
     private List<Department>? Departments { get; set; }
+    private List<Employee>? Employees { get; set; }
+    private int SelectedItemId { get; set; }
+
+    private int choosenEmployee { get; set; }
+
 
     protected override async Task OnInitializedAsync()
     {
         Departments = (await _departmentService.GetAllDepartmetsAsync())?.ToList();
+
+
+        Employees = (await _employeeService.GetAllEmployeesAsync())?.ToList();
+    }
+
+    private void OnSelectionChanged(int newSelectedValue)
+    {
+        SelectedItemId = newSelectedValue;
+    }
+
+    private async Task OnEmployeeAdded()
+    {
+        var employee = await _employeeService.GetEmployeeByIdAsync(choosenEmployee);
+        await _departmentService.AddEmployee(choosenEmployee, employee);
     }
 }

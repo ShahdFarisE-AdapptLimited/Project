@@ -26,6 +26,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Trials/Project/Client/Layout/DepartmentsListBox.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XERlcGFydG1lbnRzTGlzdEJveC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Trials/Project/Client/Pages/Departments/AddNewDepartment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcQWRkTmV3RGVwYXJ0bWVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

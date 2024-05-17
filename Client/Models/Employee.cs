@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Client.Models
 {
@@ -16,5 +17,8 @@ namespace Client.Models
         public string EmailAddress { get; set; } = string.Empty;
 
         public string PasswordHash { get; set; } = string.Empty;
+
+        [ForeignKey(nameof(Department))]
+        public int DepartmentId { get; set; }
     }
 }

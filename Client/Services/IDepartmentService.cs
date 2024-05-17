@@ -10,7 +10,6 @@ namespace Client.Services
         Task<bool> InsertDepartmentAsync(Department Dpartment);
         Task<bool> UpdateDepartmentAsync(Department Department);
 
-        //ToDo: 
-        //Task<bool> AddEmployeeToDepartment(int departmentId, Employee employee);
+        Task<bool> AddEmployee(int DepartmentId, Employee employee);
     }
 }
