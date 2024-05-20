@@ -17,7 +17,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(EmploeeDto emploeeDto)
+        public async Task<IActionResult> Register(EmployeeDto emploeeDto)
         {
             var token = await _authService.RegisterAsync(emploeeDto);
             if (token == null)

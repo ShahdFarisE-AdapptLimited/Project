@@ -1,5 +1,4 @@
-﻿using Client.Models;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Api.Models
@@ -10,6 +9,6 @@ namespace Api.Models
         public string DepartmentName { get; set; } = string.Empty;
 
         //Navigation property 
-        public ICollection<Employee> Employees { get; set; } = new Collection<Employee>();
+       public ICollection<Employee>? Employees { get; set; } = new Collection<Employee>();
     }
 }

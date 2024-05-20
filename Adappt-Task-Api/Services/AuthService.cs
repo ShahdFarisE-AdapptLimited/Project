@@ -20,7 +20,7 @@ namespace Api.Services
             _context = context;
         }
 
-        public async Task<string> RegisterAsync(EmploeeDto model)
+        public async Task<string> RegisterAsync(EmployeeDto model)
         {
             var userExist = DoesUserExist(model.EmailAddress);
 

@@ -18,7 +18,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(EmploeeDto Dto)
+        public async Task<IActionResult> Create(EmployeeDto Dto)
         {
             if (!ModelState.IsValid)
             {
@@ -33,7 +33,7 @@ namespace Api.Controllers
                 EmailAddress = Dto.EmailAddress
             };
 
-            
+
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Dto.Password);
             employee.PasswordHash = hashedPassword;
 
@@ -45,19 +45,25 @@ namespace Api.Controllers
         [HttpGet("Get")]
         public async Task<IActionResult> Get()
         {
-            var employees = await _context.Employees.ToListAsync();
+            var employees = await _context.Employees
+                                      .Include(e => e.Departments)
+                                     // .ThenInclude(d => d.Employees)
+                                      .ToListAsync();
             return Ok(employees);
         }
 
         [HttpGet("GetById/{Id}")]
         public async Task<IActionResult> GetById(int Id)
         {
-            var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeId == Id);
+            var employee = await _context.Employees
+                .Include(e => e.Departments)
+               // .ThenInclude(d => d.Employees)
+                .FirstOrDefaultAsync(e => e.EmployeeId == Id);
             return Ok(employee);
         }
 
         [HttpPut("Update/{EmployeeId}")]
-        public async Task<IActionResult> Update(int EmployeeId, EmploeeDto NewEmploee)
+        public async Task<IActionResult> Update(int EmployeeId, EmployeeDto NewEmploee)
         {
             var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeId == EmployeeId);
 
@@ -93,6 +99,6 @@ namespace Api.Controllers
             _context.Employees.Remove(employee);
             await _context.SaveChangesAsync();
             return NoContent();
-        }
+        } 
     }
 }

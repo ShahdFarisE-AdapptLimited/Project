@@ -20,7 +20,7 @@ namespace Api.Controllers
         public async Task<IActionResult> GetDepartmemnts()
         {
             var departments = await _context.Departments
-                                        .Include(d => d.Employees)
+                                       // .Include(d => d.Employees)
                                         .ToListAsync();
             return Ok(departments);
         }
@@ -29,9 +29,9 @@ namespace Api.Controllers
         public async Task<IActionResult> GetDepartmentById(int DepartmentId)
         {
             var department = await _context.Departments
-                .Include(d => d.Employees)
+               // .Include(d => d.Employees)
                 .FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
-                                
+
             return Ok(department);
         }
 
@@ -49,8 +49,6 @@ namespace Api.Controllers
             return Ok(depart);
         }
 
-
-
         [HttpPut("AddEmployee/{DepartmentId}")]
         public async Task<IActionResult> AddEmployee(int DepartmentId, Employee employee)
         {
@@ -62,19 +60,45 @@ namespace Api.Controllers
             }
 
 
-            employee.Departments.Add(depart);
-            _context.Update(employee);
-
-            depart.Employees.Add(employee);
-            _context.Update(depart);
+            employee?.Departments?.Add(depart);
+            _context.Employees.Update(employee!);
 
             await _context.SaveChangesAsync();
 
             return Ok();
         }
 
+        [HttpPut("AddEmployees/{DepartmentId}")]
+        public async Task<IActionResult> AddEmployees(int DepartmentId, List<EmployeeWithID> employees)
+        {
+            var depart = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
+            if (depart is null)
+            {
+                return NotFound();
+            }
+
+            
+            foreach (var employee in employees)
+            {
+                var emp = await _context.Employees.Include(e => e.Departments).FirstOrDefaultAsync(e => e.EmployeeId == employee.EmployeeId);
+              
+                if (emp?.Departments is null)
+                {
+                    emp.Departments = new List<Department>();
+                }
+                emp.Departments.Add(depart);
+                _context.Employees.Update(emp);
+
+               // depart.Employees.Add(employee);
+               // _context.Update(depart);
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
         [HttpPut("RemoveEmployee/{DepartmentId}")]
-        public async Task<IActionResult> RemoveEmployee(int DepartmentId, Employee employee)
+        public async Task<IActionResult> RemoveEmployee(int DepartmentId, EmployeeWithID employee)
         {
             var depart = await _context.Departments.FirstOrDefaultAsync(d => d.DepartmentId == DepartmentId);
 
@@ -82,18 +106,53 @@ namespace Api.Controllers
             {
                 return NotFound();
             }
+            var emp = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeId == employee.EmployeeId);
 
+            emp?.Departments?.Remove(depart);
+            _context.Employees.Update(emp);
 
-            employee.Departments.Remove(depart);
-            _context.Update(employee);
-
-            depart.Employees.Remove(employee);
+           // depart.Employees.Remove(employee);
             _context.Update(depart);
 
             await _context.SaveChangesAsync();
 
             return Ok();
         }
+
+        [HttpPut("RemoveEmployees/{DepartmentId}")]
+        public async Task<IActionResult> RemoveEmployees(int departmentId, List<EmployeeWithID> employees)
+        {
+            // Find the department by ID
+            var department = await _context.Departments
+              .Include(d => d.Employees) // Eager loading for employees
+              .FirstOrDefaultAsync(d => d.DepartmentId == departmentId);
+
+            if (department == null)
+            {
+                return NotFound("Department not found");
+            }
+
+            // Get a list of employee IDs to remove
+            var employeeIdsToRemove = employees.Select(e => e.EmployeeId).ToList();
+
+            // Filter employees in the department based on IDs to remove
+            var employeesToRemove = department.Employees.Where(e => employeeIdsToRemove.Contains(e.EmployeeId)).ToList();
+
+            foreach (var emp in employeesToRemove)
+            {
+                emp.Departments?.Remove(department);
+                department.Employees?.Remove(emp);
+
+                _context.Employees.Update(emp);
+            }
+
+
+            _context.Departments.Update(department);
+            // Update the department in the database
+            await _context.SaveChangesAsync();
+            return Ok(department);
+        }
+       
 
         [HttpPut("Update")]
         public async Task<IActionResult> Update(int DepartmentId, Department NewDepartment)
@@ -104,8 +163,6 @@ namespace Api.Controllers
                 return NotFound();
             }
             department.DepartmentName = NewDepartment.DepartmentName;
-            department.Employees = NewDepartment.Employees;
-
             _context.Departments.Update(NewDepartment);
             await _context.SaveChangesAsync();
             return Ok(NewDepartment);
@@ -119,7 +176,7 @@ namespace Api.Controllers
             {
                 return NotFound();
             }
-            _context.Departments.Update(department);
+            _context.Departments.Remove(department);
             await _context.SaveChangesAsync();
             return Ok(department);
         }

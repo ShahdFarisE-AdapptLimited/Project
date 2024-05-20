@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Api.Models
+namespace Api.DTO
 {
-    public class Employee
+    public class EmployeeDto
     {
-        public int EmployeeId { get; set; }
-
         public string FirstName { get; set; } = string.Empty;
 
         public string LastName { get; set; } = string.Empty;
@@ -15,9 +13,6 @@ namespace Api.Models
         [EmailAddress]
         public string EmailAddress { get; set; } = string.Empty;
 
-        public string PasswordHash { get; set; } = string.Empty;
-
-        public List<Department>? Departments { get; set; }
+        public string Password { get; set; } = string.Empty;
     }
-
 }
