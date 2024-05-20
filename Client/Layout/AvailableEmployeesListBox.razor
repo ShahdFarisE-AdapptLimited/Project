@@ -1,0 +1,142 @@
+﻿@using Client.Models
+@code {
+    [Parameter] public List<Employee> Employees { get; set; }
+    [Parameter] public string displayName { get; set; }
+    [Parameter] public int displaySize { get; set; }
+    [Parameter] public List<string> SelectedEmployees { get; set; }
+    [Parameter] public EventCallback<List<string>> SelectedEmployeesChanged { get; set; }
+
+    private MouseEventArgs CurrentMouseEvent = null!;
+
+    private string _selectedEmployees;
+    private string selectedEmployees
+    {
+        get
+        {
+            return _selectedEmployees;
+        }
+
+        set
+        {
+            if (selectedEmployees != null)
+            {
+                OnEmployeesSelected(value);
+            }
+
+            _selectedEmployees = "";
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        selectedEmployees = null!;
+        SelectedEmployees = new List<string>() { "empty" };
+    }
+
+    private void OnEmployeesSelected(string value)
+    {
+        bool prior = false;
+        int listone = 0;
+        int listtwo = 0;
+
+        int f1 = 0;
+        int f2 = 0;
+
+        //shift key pressed
+        if (CurrentMouseEvent.ShiftKey && !value.Contains("empty"))
+        {
+            // get #selected item
+            for (int i = 0; i < Employees.Count; i++)
+            {
+                if (value == Employees[i].EmployeeId.ToString())
+                {
+                    listone = i;
+                }
+            }
+
+            foreach (var employee in SelectedEmployees)
+            {
+                for (int i = 0; i < Employees.Count; i++)
+                {
+                    if (employee == Employees[i].EmployeeId.ToString())
+                    {
+                        if (i < listone)
+                        {
+                            prior = true;
+                            listtwo = i;
+                        }
+
+                        if (i > listtwo && prior == false)
+                        {
+                            listtwo = i;
+                        }
+                    }
+                }
+            }
+
+            if (!prior)
+            {
+                f1 = listone; f2 = listtwo;
+            }
+            else
+            {
+                f1 = listtwo; f2 = listone;
+            }
+
+            for (int i = f1; i < f2; i++)
+            {
+                string employeeToAdd = Employees[i].EmployeeId.ToString();
+                if (!SelectedEmployees.Contains(employeeToAdd))
+                {
+                    SelectedEmployees.Add(employeeToAdd);
+                }
+            }
+        }
+        else
+        {
+            //ctrl key pressed
+            if (!CurrentMouseEvent.CtrlKey || value.Contains("empty"))
+            {
+                SelectedEmployees.Clear();
+            }
+
+            // add or remove from list
+            if (!SelectedEmployees.Contains(value))
+            {
+                SelectedEmployees.Add(value);
+            }
+            else
+            {
+                SelectedEmployees.Remove(value);
+            }
+
+            //empty
+            if (SelectedEmployees.Count == 0)
+            {
+                SelectedEmployees.Add("empty");
+            }
+
+            //send back to parent
+            SelectedEmployeesChanged.InvokeAsync(SelectedEmployees);
+        }
+    }
+}
+
+<div style="width:250px">
+    <div>
+        <div class="btn-outline-info active btn-sm p-0" style="text-align:center">@displayName</div>
+    </div>
+    <div>
+        <select @bind="selectedEmployees" size="@displaySize" class="overflow-auto" style="font-size:14px; min-width:250px; max-width:250px;">
+            @if (Employees != null)
+            {
+                foreach (var employee in Employees)
+                {
+                    <option class="px-2" @onmousedown="@(async (em) => CurrentMouseEvent = em)" value="@employee.EmployeeId" style="@(SelectedEmployees.Contains(employee.EmployeeId.ToString()) ? "background-color:lightgray;" : "background-color:white")">@($"{employee.FirstName} {employee.LastName}")</option>
+                }
+            }
+
+        </select>
+
+    </div>
+</div>

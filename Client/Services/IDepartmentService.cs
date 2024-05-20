@@ -12,5 +12,8 @@ namespace Client.Services
 
         Task<bool> AddEmployee(int DepartmentId, Employee employee);
         Task<bool> RemoveEmployee(int DepartmentId, Employee employee);
+
+        Task<bool> AddEmployees(int DepartmentId, List<Employee> employees);
+        Task<bool> RemoveEmployees(int DepartmentId, List<Employee> emploees);
     }
 }

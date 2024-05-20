@@ -63,5 +63,19 @@ namespace Client.Services
             response.EnsureSuccessStatusCode();
             return response.IsSuccessStatusCode;
         }
+
+        public async Task<bool> AddEmployees(int DepartmentId, List<Employee> employees)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"Departments/AddEmployees/{DepartmentId}", employees);
+            response.EnsureSuccessStatusCode();
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> RemoveEmployees(int DepartmentId, List<Employee> emploees)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"Departments/RemoveEmployees/{DepartmentId}", emploees);
+            response.EnsureSuccessStatusCode();
+            return response.IsSuccessStatusCode;
+        }
     }
 }

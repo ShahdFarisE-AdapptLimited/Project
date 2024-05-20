@@ -1,7 +1,6 @@
 ﻿@page "/departments"
 @using Client.Models
 @using Client.Services
-@using Client.Pages.Popup
 @inject NavigationManager NavigationManager
 @inject IDepartmentService _departmentService
 @inject IEmployeeService _employeeService
@@ -15,39 +14,163 @@
 else
 {
     <select @onchange="OnDepartmentChange">
+        <option value="0"> Choose Department </option>
         @foreach (var deaprt in departments)
         {
-            <option value="@deaprt">
+            <option value="@deaprt.DepartmentId">
                 @deaprt.DepartmentName
             </option>
         }
     </select>
 
-    @if (showPopup)
-    {
-        <EmployeePopup Department="selectedDepartment" OnClose="ClosePopup"></EmployeePopup>
-    }
+    <hr />
+    
+    <div>
+        <div>
+        <AvailableEmployeesListBox Employees="employeesDropDownList"
+                                   displayName="Available Employees"
+                                   displaySize="10"
+                                   SelectedEmployees="selectedEmployeesOfAvailable"
+                                   SelectedEmployeesChanged="AvailableBox">
+        </AvailableEmployeesListBox>
+        </div>
+
+        <div>
+            <button type="button" @onclick="AddEmployees">Add</button>
+            <button type="button" @onclick="RemoveEmployees">Remove</button>
+        </div>
+
+        <div>
+            <DepartmentsEmployeesListBox Employees="departmentEmployess"
+                                         displayName="Department Employees"
+                                         displaySize="10"
+                                         SelectedEmployees="selectedEmployeesOfDepartment"
+                                         SelectedEmployeesChanged="DepartmentBox">
+            </DepartmentsEmployeesListBox>
+        </div>
+    </div>
+
+
 }
 
-@code {
 
+
+@code {
     private List<Department> departments { get; set; }
-    private string  selectedDepartment { get; set; }
-    private bool showPopup = false;
+    private string selectedDepartmentId { get; set; }
+
+
+    // prameters for all available employees
+    private List<Employee> employeesDropDownList;
+    private List<string> selectedEmployeesOfAvailable;
+
+
+    //paramter of department employees
+    private List<Employee> departmentEmployess;
+    private List<string> selectedEmployeesOfDepartment;
+
 
     protected override async Task OnInitializedAsync()
     {
         departments = await _departmentService.GetAllDepartmetsAsync() ?? new();
+        // parameter
+        employeesDropDownList = new();
     }
 
-    private void OnDepartmentChange(ChangeEventArgs e)
+    private async Task OnDepartmentChange(ChangeEventArgs e)
     {
-        selectedDepartment = e.Value.ToString();
-        showPopup = true;
+        selectedDepartmentId = e.Value.ToString();
+
+        await UploadUI();
     }
 
-    private void ClosePopup()
+
+    private async Task AddEmployees()
     {
-        showPopup = true;
+        if (selectedDepartmentId == "0" || selectedEmployeesOfAvailable.Count == 0 || selectedEmployeesOfDepartment.Count == 0)
+        {
+            // Handle invalid selection (no department or no employees selected)
+            return;
+        }
+
+        var departmentId = Convert.ToInt32(selectedDepartmentId);
+        var employeeIds = selectedEmployeesOfAvailable.Select(id => int.Parse(id)).ToList();
+
+        List<Employee> selectedEmployees = new();
+
+        foreach (var id in employeeIds)
+        {
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            selectedEmployees.Add(employee!);
+        }
+
+        await _departmentService.AddEmployees(departmentId, selectedEmployees);
+
+        await UploadUI();
     }
+
+    private async Task RemoveEmployees()
+    {
+        if (selectedDepartmentId == "0" || selectedEmployeesOfDepartment.Count == 0 ||  selectedEmployeesOfAvailable.Count == 0)
+        {
+            return;    
+        }
+
+        var departmentId = Convert.ToInt32(selectedDepartmentId);
+      
+        var employeeIds = selectedEmployeesOfDepartment.Select(id => int.Parse(id)).ToList();
+
+        List<Employee> selectedEmployees = new();
+        foreach (var id in employeeIds)
+        {
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            selectedEmployees.Add(employee!);
+        }
+
+        await _departmentService.RemoveEmployees(departmentId, selectedEmployees);
+
+        List<Employee> allEmployees = await _employeeService.GetAllEmployeesAsync() ?? new();
+        employeesDropDownList = allEmployees.Where(e => !e.Departments.Any(d => d.DepartmentId == departmentId)).ToList();
+        departmentEmployess = allEmployees.Where(e => e.Departments.Any(d => d.DepartmentId == departmentId)).ToList();
+    }
+
+
+    public void AvailableBox(List<string> Selected)
+    {
+        selectedEmployeesOfAvailable = new List<string>();
+        List<string> temp = new();
+
+        foreach (var item in Selected)
+        {
+            temp.Add(item);
+        }
+        selectedEmployeesOfAvailable = temp;
+    }
+
+    public void DepartmentBox(List<string> Selected)
+    {
+        selectedEmployeesOfAvailable = new List<string>();
+        List<string> temp = new();
+
+        foreach (var item in Selected)
+        {
+            temp.Add(item);
+        }
+        selectedEmployeesOfAvailable = temp;
+    }
+
+    private async Task UploadUI()
+    {
+        // intialize paramter of available employees
+        var id = Convert.ToInt32(selectedDepartmentId);
+
+        List<Employee> allEmployees = await _employeeService.GetAllEmployeesAsync() ?? new();
+      
+        employeesDropDownList = allEmployees.Where(e => !e.Departments.Any(d => d.DepartmentId == id)).ToList();
+        departmentEmployess = allEmployees.Where(e => e.Departments.Any(d => d.DepartmentId == id)).ToList();
+
+        selectedEmployeesOfAvailable = new List<string>() { "empty" };
+        selectedEmployeesOfDepartment = new List<string>() { "empty" };
+    }
+
 }

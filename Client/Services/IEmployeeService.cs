@@ -6,6 +6,7 @@ namespace Client.Services
     {
         Task<bool> DeleteEmployeeAsync(int id);
         Task<List<Employee>?> GetAllEmployeesAsync();
+
         Task<Employee?> GetEmployeeByIdAsync(int id);
         Task<bool> InsertEmployeeAsync(Employee employee);
         Task<bool> UpdateEmployeeAsync(Employee employee);

@@ -19,6 +19,6 @@ namespace Client.Models
         public string PasswordHash { get; set; } = string.Empty;
 
     
-        public List<Department> Departments { get; set; }
+        public List<Department>? Departments { get; set; }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Client.Models;
+using Newtonsoft.Json;
+using System;
 using System.Net.Http.Json;
+using System.Text;
 
 namespace Client.Services
 {
@@ -51,5 +54,7 @@ namespace Client.Services
             response.EnsureSuccessStatusCode(); // Check for successful response
             return response.IsSuccessStatusCode; // Return true on successful deletion
         }
+
+      
     }
 }

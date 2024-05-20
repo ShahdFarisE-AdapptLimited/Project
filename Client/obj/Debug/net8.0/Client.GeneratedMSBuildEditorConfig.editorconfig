@@ -26,8 +26,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Trials/Project/Client/Layout/DepartmentsListBox.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XERlcGFydG1lbnRzTGlzdEJveC5yYXpvcg==
+[C:/Trials/Project/Client/Layout/AvailableEmployeesListBox.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEF2YWlsYWJsZUVtcGxveWVlc0xpc3RCb3gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Trials/Project/Client/Layout/DepartmentsEmployeesListBox.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XERlcGFydG1lbnRzRW1wbG95ZWVzTGlzdEJveC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Trials/Project/Client/Pages/Departments/AddNewDepartment.razor]
@@ -68,10 +72,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Trials/Project/Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Trials/Project/Client/Pages/Popup/EmployeePopup.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9wdXBcRW1wbG95ZWVQb3B1cC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Trials/Project/Client/_Imports.razor]
